@@ -87,60 +87,39 @@ a[href]:visited {
   user-select: text;
 }
 
-/* Arabic Numbering */
+/* Numbering */
 
-.statute ol[type="1"] {
-  counter-reset: arabicStatute;
-}
-
-.statute ol[type="1"] > li {
-  list-style: none;
-  position: relative;
-}
+.statute ol[type="1"] { counter-reset: arabicStatute; }
 
 .statute ol[type="1"] > li:before {
   content: "(" counter(arabicStatute, arabic) ") ";
   counter-increment: arabicStatute;
-  display: block;
-  left: -2rem;
-  position: absolute;
-  user-select: text;
 }
 
-/* Uppercase Alpha Numbering */
+.statute ol[type="A"] { counter-reset: upperStatute; }
 
-.statute ol[type="A"] {
-  counter-reset: upperStatute;
+.statute ol[type="A"] > li:before {
+  content: "(" counter(upperStatute, upper-alpha) ") ";
+  counter-increment: upperStatute;
 }
 
+.statute ol[type="i"] { counter-reset: lowerRomanStatute; }
+
+.statute ol[type="i"] > li:before {
+  content: "(" counter(lowerRomanStatute, lower-roman) ") ";
+  counter-increment: lowerRomanStatute;
+}
+
+.statute ol[type="1"] > li,
+.statute ol[type="i"] > li,
 .statute ol[type="A"] > li {
   list-style: none;
   position: relative;
 }
 
-.statute ol[type="A"] > li:before {
-  content: "(" counter(upperStatute, upper-alpha) ") ";
-  counter-increment: upperStatute;
-  display: block;
-  left: -2rem;
-  position: absolute;
-  user-select: text;
-}
-
-/* Lowercase Roman Numbering */
-
-.statute ol[type="i"] {
-  counter-reset: lowerRomanStatute;
-}
-
-.statute ol[type="i"] > li {
-  list-style: none;
-  position: relative;
-}
-
+.statute ol[type="1"] > li:before,
+.statute ol[type="A"] > li:before,
 .statute ol[type="i"] > li:before {
-  content: "(" counter(lowerRomanStatute, lower-roman) ") ";
-  counter-increment: lowerRomanStatute;
   display: block;
   left: -2rem;
   position: absolute;
