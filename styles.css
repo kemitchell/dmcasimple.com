@@ -59,6 +59,10 @@ a[href]:visited {
   margin-top: 0.75rem;
 }
 
+.statute dfn {
+  font-style: normal;
+}
+
 .statutoryHeading {
   font-variant: small-caps;
 }
