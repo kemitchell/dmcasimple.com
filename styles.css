@@ -55,6 +55,11 @@ a[href]:visited {
   font-weight: bold;
 }
 
-.heading {
+.statute li {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.statutoryHeading {
   font-variant: small-caps;
 }
