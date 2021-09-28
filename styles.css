@@ -125,3 +125,7 @@ a[href]:visited {
   position: absolute;
   user-select: text;
 }
+
+:target, :target:before {
+  background: #ffffc9;
+}
